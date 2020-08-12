@@ -157,3 +157,4 @@ console.log(resultP);
 objP.printName();
 const objM = new Male("blog", 25, "MALE");
 objM.getGender();
+ 
