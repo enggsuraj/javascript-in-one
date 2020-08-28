@@ -1,8 +1,7 @@
 // TODO: ARRAYS DATA STRUCTURE
-/** 
- * ! JavaScript arrays are used to store multiple values in a single variable. 
-*/
-
+/**
+ * ! JavaScript arrays are used to store multiple values in a single variable.
+ */
 
 //static array
 var cars = ["Saab", "Volvo", "BMW"];
@@ -15,24 +14,24 @@ cars[0] = "Tata";
 const arrDy = new Array();
 
 /****************** Array Properties and Methods ******************/
-var len = cars.length; 
-var sortData = cars.sort(); 
+var len = cars.length;
+var sortData = cars.sort();
 
 /****************** foreach ******************/
-var numArray = [11,22,33,44,55];
-numArray.forEach(function(value,index){
-    console.log(value,index);
-})
+var numArray = [11, 22, 33, 44, 55];
+numArray.forEach(function (value, index) {
+  console.log(value, index);
+});
 
 //for loop
-var ourArray =[];
+var ourArray = [];
 for (var i = 1; i < 6; i++) {
-    ourArray.push(i);
+  ourArray.push(i);
 }
 console.log(ourArray);
 
 /****************** push() ******************/
-var numArr = [1,2,3,4,5];
+var numArr = [1, 2, 3, 4, 5];
 numArr.push(6);
 console.log(numArr); //[ 1, 2, 3, 4, 5, 6 ]
 
@@ -53,9 +52,9 @@ console.log(numArr.indexOf(5)); //4
 
 /****************** splice() ******************/
 /**
-* ! The splice() method can be used to add new items to an array 
-* ! (position, howmanyelementtoremove, itemstobeadded) 
-*/
+ * ! The splice() method can be used to add new items to an array
+ * ! (position, howmanyelementtoremove, itemstobeadded)
+ */
 
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 0, "Lemon", "Kiwi");
@@ -68,7 +67,8 @@ fruits.splice(2, 0, "Lemon", "Kiwi");
 ?The splice() method returns an array with the deleted items:
 */
 
-/****************** splice() ******************/ 
+/****************** splice() ******************/
+
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(0, 1); // Removes the first element of fruits
 
@@ -80,22 +80,21 @@ var citrus = fruits.slice(1);
 var citrus = fruits.slice(3);
 //Apple,Mango
 
-
 /****************** concat() ******************/
 var arr1 = ["Cecilie", "Lone"];
 var arr2 = ["Emil", "Tobias", "Linus"];
 var arr3 = ["Robin", "Morgan"];
-var myChildren = arr1.concat(arr2, arr3);   // Concatenates arr1 with arr2 and arr3
-console.log(typeof(fruits.toString()));
+var myChildren = arr1.concat(arr2, arr3); // Concatenates arr1 with arr2 and arr3
+console.log(typeof fruits.toString());
 
 /****************** toString() ******************/
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 console.log(myChildren);
 
 /****************** reverse() ******************/
-const array1 = ['one', 'two', 'three'];
+const array1 = ["one", "two", "three"];
 const reversed = array1.reverse();
-console.log('reversed:', reversed);
+console.log("reversed:", reversed);
 
 /****************** map() ******************/
 
@@ -116,7 +115,7 @@ var over18 = numbers.filter(myFunction);
 
 function myFunction(value, index, array) {
   return value > 18;
-}  
+}
 
 /****************** join() ******************/
 
@@ -129,7 +128,6 @@ arr[4] = "Borge";
 
 console.log(arr.join());
 
-
 /**********************************************************************************************/
 //TODO : PROGRAMMING QUESTION
 
@@ -140,17 +138,17 @@ return [0, 1].
 */
 
 //METHOD 1: BRUTH FORCE - O(n^n)
-nums = [7, 4, 8, 2], target = 9;
+(nums = [7, 4, 8, 2]), (target = 9);
 
-var twoSum = function(nums, target) {
-  for(var m = 0;m<nums.length-1;m++){
-    for(var n = m+1;n<nums.length;n++){
-      if(nums[m]+nums[n] === 9){
-        return [m,n]
+var twoSum = function (nums, target) {
+  for (var m = 0; m < nums.length - 1; m++) {
+    for (var n = m + 1; n < nums.length; n++) {
+      if (nums[m] + nums[n] === 9) {
+        return [m, n];
       }
     }
   }
 };
 
-const result = twoSum(nums,target)
+const result = twoSum(nums, target);
 console.log(result);
