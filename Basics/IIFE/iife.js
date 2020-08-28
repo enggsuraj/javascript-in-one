@@ -9,3 +9,6 @@
   let b = 2;
   console.log("This will be printed");
 }
+
+//Inside IIFE
+//This will be printed
