@@ -1,30 +1,19 @@
-var name = "John"; //var is function scoped.
-let str = "This is a string"; //let and const are blocked scoped.
-const ID = 25;
+//var is function scoped, let const are block scoped
 
-//SCOPE
+//GLOBAL
+var person1 = "Mike";
+let person2 = "Victor";
+const heightincm = 180;
 
-// Global scope (name, getName)
-// Local scope (age)
-// Local scope (location)
-// Local scope (height)
-
-let name = "John";
-let getName = function () {
-  console.log(name);
-  let age = 35;
-  if (2 > 0) {
-    console.log(name);
-    console.log(age);
-    let location = "New York";
-  }
+let getDetails = function () {
+  //LOCAL
+  let hairColor = "black";
+  return {
+    person1: person1,
+    person2: person2,
+    heightincm: heightincm,
+    haircolor: hairColor,
+  };
 };
 
-getName();
-console.log(age);
-if (1 < 2) {
-  console.log(name);
-  let height = 72;
-  getName();
-}
-score;
+console.log(getDetails());
