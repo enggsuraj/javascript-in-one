@@ -1,4 +1,4 @@
-//ES5
+/****************************** INHERITANCE IN ES5 ******************************/
 
 var Person5 = function (name, yearOfBirth, job) {
   this.name = name;
@@ -12,6 +12,7 @@ Person5.prototype.calculateAge = function () {
 };
 
 var Athelete5 = function (name, yearOfBirth, job, medals, olymicGames) {
+  //INHERIT USING
   Person5.call(this, name, yearOfBirth, job);
   this.medals = medals;
   this.olymicGames = olymicGames;
@@ -27,7 +28,7 @@ var john_Athelete5 = new Athelete5("blogtheorem", 1900, "swimmer", 3, 10);
 john_Athelete5.calculateAge();
 john_Athelete5.wonMedal();
 
-//ES6
+/****************************** INHERITANCE IN ES6 ******************************/
 
 class PersonES6 {
   constructor(name, yearOfBirth, job) {
