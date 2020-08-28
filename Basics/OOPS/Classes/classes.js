@@ -1,6 +1,8 @@
 /* ******************** CLASSES & SUBCLASSES ************************/
 
 //ES5
+//No class keyword in ES5
+
 
 var Person = function (name, yearOfBirth, job) {
   this.name = name;
