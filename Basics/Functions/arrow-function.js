@@ -31,22 +31,18 @@ console.log(backgroundColor.value); // "Red"
 //6.
 const people = [
   {
-    name: "Andrew",
+    name: "Dev",
     age: 27,
   },
   {
-    name: "Vikram",
+    name: "Sunny",
     age: 31,
   },
   {
-    name: "Jess",
+    name: "Lily",
     age: 22,
   },
 ];
-
-// const under30 = people.filter(function (person) {
-//     return person.age < 30
-// })
 
 const under30 = people.filter((person) => person.age < 30);
 console.log(under30);
