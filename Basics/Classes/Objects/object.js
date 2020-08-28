@@ -1,4 +1,4 @@
-//OBJECT
+//1. OBJECT
 let obj = {
   name: "corona",
   id: 19,
@@ -11,7 +11,7 @@ let obj = {
 
 obj.message();
 
-//OBJECT REFERENCES
+//2. OBJECT REFERENCES
 // Both logs print  things
 let myAccount = {
   name: "John Dev",
@@ -22,6 +22,8 @@ let addExpense = function (account, amount) {
   account = {};
   account.age = 1;
   console.log(account);
+  //{ age: 1 }
 };
 addExpense(myAccount, 2000);
 console.log(myAccount);
+//{ name: 'John Dev', expenses: 0, income: 0 }
