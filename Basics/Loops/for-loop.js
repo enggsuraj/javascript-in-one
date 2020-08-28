@@ -1,10 +1,20 @@
+//1.
 const arr = [];
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   arr.push(i);
 }
 console.log(arr);
+//[ 0, 1, 2, 3, 4 ]
 
-//for of
-for (let n of arr) {
-  console.log(n);
+//2. for of
+for (let num of arr) {
+  console.log(num);
 }
+
+/*
+0
+1
+2
+3
+4
+*/
