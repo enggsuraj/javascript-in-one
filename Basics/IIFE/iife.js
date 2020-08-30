@@ -10,5 +10,10 @@
   console.log("This will be printed");
 }
 
+(() => {
+  console.log("INSIDE IIFE");
+})();
+
 //Inside IIFE
 //This will be printed
+//INSIDE IIFE
