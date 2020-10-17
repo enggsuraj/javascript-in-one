@@ -23,9 +23,7 @@ innerHTML
 setAttribute
 
 DOM Events
-
 onclick
-
 
 textContent
 innerText
@@ -50,6 +48,4 @@ nodeType
 nodeName
 innerHTML
 
-
-
-*/ 
+*/

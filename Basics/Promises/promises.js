@@ -62,3 +62,17 @@ getDataPromise(10)
   .catch((err) => {
     console.log(err);
   });
+
+// Promise
+const run = () =>
+  new Promise((resolve, reject) => {
+    resolve(setTimeout(1000));
+  });
+
+run()
+  .then(() => {
+    console.log("log after 1000 ms");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
