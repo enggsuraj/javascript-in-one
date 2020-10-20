@@ -1,4 +1,5 @@
-//1. OBJECT
+//1. OBJECT - COLLECTIONS OF KEY: VALUE PAIR
+
 let obj = {
   name: "corona",
   id: 19,
@@ -10,14 +11,17 @@ let obj = {
 };
 
 obj.message();
+// Stay Safe
 
 //2. OBJECT REFERENCES
-// Both logs print  things
+// Both logs print things
+
 let myAccount = {
   name: "John Dev",
   expenses: 0,
   income: 0,
 };
+
 let addExpense = function (account, amount) {
   account = {};
   account.age = 1;
