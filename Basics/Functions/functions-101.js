@@ -1,33 +1,46 @@
 // Function - input (argument), code, output (return value)
 
 let greetUser = function () {
-    console.log('Welcome user!')
-}
+  console.log("Welcome user!");
+};
 
-greetUser()
-greetUser()
-greetUser()
+greetUser();
+greetUser();
+greetUser();
 
 let square = function (num) {
-    let result = num * num
-    return result
-}
+  let result = num * num;
+  return result;
+};
 
-let value = square(3)
-let otherValue = square(10)
+let value = square(3);
+let otherValue = square(10);
 
-console.log(value)
-console.log(otherValue)
+console.log(value);
+console.log(otherValue);
 
 // Challenge Area
 
 let convertFahrenheitToCelsius = function (fahrenheit) {
-    let celsius = (fahrenheit - 32) * 5 / 9
-    return celsius
+  let celsius = ((fahrenheit - 32) * 5) / 9;
+  return celsius;
+};
+
+let tempOne = convertFahrenheitToCelsius(32);
+let tempTwo = convertFahrenheitToCelsius(68);
+
+console.log(tempOne);
+console.log(tempTwo);
+
+// fn dec vs  fns exp
+
+funcD();
+funcE(); // ERROR CANT BE ACCESS BEFORE INI
+
+function funcD() {
+  console.log("funcD");
 }
 
-let tempOne = convertFahrenheitToCelsius(32)
-let tempTwo = convertFahrenheitToCelsius(68)
-
-console.log(tempOne)
-console.log(tempTwo)
+let funE = function () {
+  console.log("funcE");
+};

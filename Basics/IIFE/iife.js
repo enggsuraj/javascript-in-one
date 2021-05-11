@@ -17,3 +17,31 @@
 //Inside IIFE
 //This will be printed
 //INSIDE IIFE
+
+/************************************ */
+let modelController = (() => {
+  //PRIVATE
+  let counterone = 1;
+  let countertwo = 1;
+
+  //PUBLIC
+  return {
+    counterOne: () => {
+      return counterone++;
+    },
+
+    counterTwo: () => {
+      return countertwo++;
+    },
+
+    getCounterOne: () => {
+      counterone = 0;
+      return counterone;
+    },
+    getCounterTwo: () => {
+      countertwo = 0;
+
+      return countertwo;
+    },
+  };
+})();

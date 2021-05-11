@@ -29,3 +29,37 @@ getName.apply(obj4, ["developer", 123]);
 
 let myName = getName.bind(obj4);
 myName("dev", 123);
+
+/*********************************************** */
+
+//2.
+
+/*
+
+let obj = {
+  name: "blogtheorem",
+  ID: 123,
+  isCoding: true,
+};
+
+let getName = function (channel, passion) {
+  console.log(this.name, channel, passion);
+};
+
+let getID = function () {
+  console.log(this.ID);
+};
+
+// call
+getName.call(obj, "instagram", "webdeveloper");
+
+// apply
+getName.call(obj, ["instagram", "webdeveloper"]);
+
+// bind
+let getMyName = getName.bind(obj, "instagram", "webdeveloper");
+console.log(getMyName);
+getMyName();
+
+
+*/

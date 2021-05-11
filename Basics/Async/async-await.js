@@ -41,3 +41,27 @@ processData()
   .catch((error) => {
     console.log("Error", error);
   });
+
+/******************************************* */
+
+/*
+
+let fetchData = async () => {
+  try {
+    let response = await fetch("https://testimonialapi.toolcarton.com/api/1");
+    let data = await response.json();
+    return data;
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+fetchData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+*/

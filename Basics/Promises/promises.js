@@ -76,3 +76,27 @@ run()
   .catch((err) => {
     console.log(err);
   });
+
+/******************************* */
+
+// PROMISES
+
+/*
+
+let myPromise = new Promise((resolve, reject) => {
+  let a = 1;
+  if (a === 1) {
+    resolve("success");
+  } else {
+    reject("failed");
+  }
+});
+
+myPromise.then((message) => {
+  console.log("Promise: " + message);
+});
+myPromise.catch((message) => {
+  console.log("Error: " + message);
+});
+
+*/

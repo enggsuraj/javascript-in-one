@@ -60,3 +60,18 @@ class Athelete6 extends PersonES6 {
 var john_Athelete6 = new Athelete6("blogtheorem", 1900, "swimmer", 3, 10);
 john_Athelete6.calculateAge();
 john_Athelete6.wonMedal();
+
+/**************************** */
+
+// PROTOTYP INHERITNACE
+
+function car(model) {
+  this.model = model;
+}
+
+car.prototype.getModel = function () {
+  return this.model;
+};
+
+let toyota = new car("toyota");
+console.log(toyota.getModel());
