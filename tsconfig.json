@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "rootDir": "./TypeScript/src",
+        "outDir": "./TypeScript/dist"
+    }
+}

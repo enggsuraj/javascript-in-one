@@ -25,10 +25,12 @@ class PersonES6 {
     this.yearOfBirth = yearOfBirth;
     this.job = job;
   }
+
   calculateAge = function () {
     var age = new Date().getFullYear - this.yearOfBirth;
     return age;
   };
+
   static greeting() {
     console.log("Hello!!");
   }

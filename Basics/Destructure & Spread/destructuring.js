@@ -28,7 +28,7 @@ let obj = {
   address: {
     city: "New York",
     Area: "01/55",
-  },
+  }, 
 };
 
 let { name, ID } = obj;

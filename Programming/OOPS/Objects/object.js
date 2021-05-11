@@ -31,3 +31,27 @@ let addExpense = function (account, amount) {
 addExpense(myAccount, 2000);
 console.log(myAccount);
 //{ name: 'John Dev', expenses: 0, income: 0 }
+
+// 3. Object constructor:
+let object = new Object();
+
+// 4. Object's create method:
+let object = Object.create(null);
+
+// 5. Function constructor:
+function Person(name) {
+  var object = {};
+  object.name = name;
+  object.age = 21;
+  return object;
+}
+var object = new Person("Sudheer");
+
+// 6. ES6 Class syntax:
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+var object = new Person("Sudheer");

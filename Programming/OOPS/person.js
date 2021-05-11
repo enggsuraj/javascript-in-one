@@ -69,7 +69,30 @@ class Student extends Person {
     return `${this.firstName} is ${status} the class.`;
   }
 }
-Dev;
+
 const me = new Employee("John", "Dev", 27, "Developer", []);
 me.fullName = "Mark Twik ";
 console.log(me.getBio());
+
+/* ******************************* ES7 ***************************************/
+
+class Human {
+  gender = "male";
+  printGender = () => {
+    console.log(this.gender);
+  };
+}
+
+class Person extends Human {
+  name = "Lily";
+  genger = "female";
+
+  printMyname = () => {
+    console.log(this.name);
+  };
+}
+
+const person = new Person();
+person.printMyname();
+person.printGender();
+//John female
