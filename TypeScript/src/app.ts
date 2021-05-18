@@ -33,6 +33,8 @@ let num:number = 45;
 let str:string = 'TypeScript';
 let isCoding:boolean = true;
 
+let data: string | number;
+
 const getName = (name:string) => {
     return `Name is ${name}`;
 }
@@ -43,15 +45,17 @@ getName("suraj")
 let arr_1:number[] = [1,2,3,4,5]
 arr_1.push(6);
 
+let arr_4:[string, number] = ['a', 1];
+
 let arr_2: string[] = ['a','b','c'];
 arr_2.push('d');
 
-let arr_3: (string | number | boolean)[] = []
+let arr_3: (string | number | boolean)[] = ['a', 1, true]
 
 // 3. OBJECTS
 
 interface objInterface {
-    name:string,
+    name:string, 
     ID:number
 }
 
@@ -66,33 +70,47 @@ const getDetails = (obj: objInterface) => {
 
 getDetails(obj)
 
-//2. 
-const getData = async() => {
-    const response = await fetch('https://testimonialapi.toolcarton.com/api/1');
-    const data = response.json();
-    return data;
-}
-
-getData()
-.then(data=>{
-    console.log(data);
-})
-.catch(err=>{
-    console.log(err);
-})
+// CLASS
 
 interface PersonInterface {
     name:string;
-    ID: number;
+    age: number;
 }
 
 class Person implements PersonInterface{
-    constructor(public name:string, public ID:number){}
+
+    name: string;
+    age: number;
+
+    constructor( name:string, age:number){
+        this.name = name;
+        this.age = age;
+    }
 
     greet(){
-        return `hi ${this.name}`
+        return `hi ${this.name} ${this.age}`
     }
 }
 
-let blogtheorem = new Person('blogtheorem', 123)
-console.log(blogtheorem)
+let user = new Person('blogtheorem', 123)
+console.log(user.greet())
+
+// TYPE CASTING AND DOM
+
+const inputName = document.querySelector('.name') as HTMLInputElement
+const age = document.querySelector('.age') as HTMLInputElement
+
+// THIS WAY OR
+const form1 = document.querySelector('form');
+form1?.addEventListener('submit', ()=> {
+
+})
+
+const form2 = document.querySelector('form')!;
+form2.addEventListener('submit', ()=> {
+
+    const person = new Person (inputName.value, inputAge.valueAsNumber);
+
+})
+
+
