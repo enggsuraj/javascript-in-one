@@ -119,3 +119,12 @@ form2.addEventListener('submit', ()=> {
 })
 
 
+// GENERICS
+
+function doSomething<T>(args :T):T{
+    return args
+}
+
+doSomething(5)
+doSomething("5")
+doSomething(true)

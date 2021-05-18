@@ -78,3 +78,10 @@ form2.addEventListener('submit', function () {
     var person = new Person(inputName.value, inputAge.valueAsNumber);
     greeting.innerText = person.greet();
 });
+// GENERICS
+function doSomething(args) {
+    return args;
+}
+doSomething(5);
+doSomething("5");
+doSomething(true);
