@@ -1,31 +1,3 @@
-/*
-
-JavaScript uses anything that means you can
-assign anything to anything.
-
-TypeScript uses static typing.
-
-05:17 - String Type
-06:22 - Number Type
-06:52 - Boolean Type
-07:30 - Any Type
-08:19 - Union
-09:16 - String Array Type
-10:10 - Number Array Type
-10:49 - Boolean Array Type
-11:37 - Mixed Array Type
-13:09 - Tuples
-14:40 - Object Type
-15:56 - Custom Types
-16:53 - Function Type
-20:40 - Void Type
-21:08 - Interfaces
-22:57 - Classes
-27:04 - DOM Manipulation & Type Casting
-35:08 - Generics
-39:19 - Enums
-
-*/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -104,15 +76,3 @@ getData()
 })["catch"](function (err) {
     console.log(err);
 });
-var Person = /** @class */ (function () {
-    function Person(name, ID) {
-        this.name = name;
-        this.ID = ID;
-    }
-    Person.prototype.greet = function () {
-        return "hi " + this.name;
-    };
-    return Person;
-}());
-var blogtheorem = new Person('blogtheorem', 123);
-console.log(blogtheorem);

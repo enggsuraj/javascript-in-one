@@ -100,3 +100,9 @@ myPromise.catch((message) => {
 });
 
 */
+
+let printName = (name) => {
+  console.log(name);
+};
+
+printName("blogtheorem");
