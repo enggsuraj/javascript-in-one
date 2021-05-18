@@ -1,29 +1,32 @@
 /*
 
+tsc --init
+tsc -w
+
 JavaScript uses anything that means you can 
 assign anything to anything. 
 
 TypeScript uses static typing.
 
-05:17 - String Type
-06:22 - Number Type
-06:52 - Boolean Type
-07:30 - Any Type
-08:19 - Union
-09:16 - String Array Type
-10:10 - Number Array Type
-10:49 - Boolean Array Type
-11:37 - Mixed Array Type
-13:09 - Tuples
-14:40 - Object Type
-15:56 - Custom Types
-16:53 - Function Type
-20:40 - Void Type
-21:08 - Interfaces
-22:57 - Classes
-27:04 - DOM Manipulation & Type Casting
-35:08 - Generics
-39:19 - Enums
+String Type
+Number Type
+Boolean Type
+Any Type
+Union
+String Array Type
+Number Array Type
+Boolean Array Type
+Mixed Array Type
+Tuples
+Object Type
+Custom Types
+Function Type
+Void Type
+Interfaces
+Classes
+DOM Manipulation & Type Casting
+Generics
+Enums
 
 */
 
@@ -98,7 +101,9 @@ console.log(user.greet())
 // TYPE CASTING AND DOM
 
 const inputName = document.querySelector('.name') as HTMLInputElement
-const age = document.querySelector('.age') as HTMLInputElement
+const inputAge = document.querySelector('.age') as HTMLInputElement
+const greeting = document.querySelector('.greeting') as HTMLDivElement
+
 
 // THIS WAY OR
 const form1 = document.querySelector('form');
@@ -110,7 +115,7 @@ const form2 = document.querySelector('form')!;
 form2.addEventListener('submit', ()=> {
 
     const person = new Person (inputName.value, inputAge.valueAsNumber);
-
+    greeting.innerText = person.greet();
 })
 
 
