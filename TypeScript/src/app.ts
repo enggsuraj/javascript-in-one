@@ -128,3 +128,22 @@ function doSomething<T>(args :T):T{
 doSomething(5)
 doSomething("5")
 doSomething(true)
+
+interface book<T> {
+    id:number;
+    name:string
+    data:T
+}
+
+const abook: book<string>  = {
+    id:1,
+    name: "Title",
+    data: "1"
+}
+
+
+const bbook: book<string[]>  = {
+    id:1,
+    name: "Title",
+    data: ['Review1', "Review 2"]
+}

@@ -85,3 +85,13 @@ function doSomething(args) {
 doSomething(5);
 doSomething("5");
 doSomething(true);
+var abook = {
+    id: 1,
+    name: "Title",
+    data: "1"
+};
+var bbook = {
+    id: 1,
+    name: "Title",
+    data: ['Review1', "Review 2"]
+};
