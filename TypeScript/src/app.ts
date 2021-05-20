@@ -103,7 +103,7 @@ console.log(user.greet())
 const inputName = document.querySelector('.name') as HTMLInputElement
 const inputAge = document.querySelector('.age') as HTMLInputElement
 const greeting = document.querySelector('.greeting') as HTMLDivElement
-
+const ID = document.querySelector('.id') as HTMLDivElement
 
 // THIS WAY OR
 const form1 = document.querySelector('form');
@@ -147,3 +147,4 @@ const bbook: book<string[]>  = {
     name: "Title",
     data: ['Review1', "Review 2"]
 }
+
