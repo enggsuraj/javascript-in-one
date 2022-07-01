@@ -41,3 +41,13 @@ getdataAW();
 (async () => {
   console.log("INSIDE IIFE");
 })();
+
+// *******************************  ASYNC AWAIT FETCH
+
+async function fetchData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+fetchData();

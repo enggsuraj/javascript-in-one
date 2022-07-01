@@ -9,6 +9,7 @@ const createCounter = () => {
       count--;
     },
     get() {
+          
       return count;
     },
   };

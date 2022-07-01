@@ -1,17 +1,17 @@
 "use strict";
 var numValue = 45;
-var stringValue = 'Hello';
+var stringValue = "Hello";
 var newArr = [1, 2, 3];
 var myObj = {
-    name: 'blogtheorem',
-    ID: 123
+  name: "blogtheorem",
+  ID: 123,
 };
 var getObjData = function (myObj) {
-    console.log(myObj.name + " and " + myObj.ID);
+  console.log(myObj.name + " and " + myObj.ID);
 };
 getObjData(myObj);
-console.log(1 + 2 + '3');
-// HEIGHT AND WIDTH OF IMAGE 
+console.log(1 + 2 + "3");
+// HEIGHT AND WIDTH OF IMAGE
 /* let img = new Image();
 img.onload = function(){
     console.log(this.width, this.height)
