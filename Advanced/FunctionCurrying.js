@@ -14,7 +14,7 @@ let multiplyByFour = multiply.bind(this, 4, 5);
 multiplyByFour();
 // 20
 
-// METHOD TWO ---------------
+// METHOD TWO -------------------------------------------
 
 let multiplyIT = function (x) {
   return function (y) {
@@ -29,3 +29,14 @@ multiplyITbyTwo(3);
 let multiplyITbyThree = multiplyIT(3);
 multiplyITbyThree(3);
 // 9
+
+// MEHTOD 3 ---------------------------------------------
+
+function calculateVolume(length) {
+  return function (breadth) {
+    return function (height) {
+      console.log(length * breadth * height);
+    };
+  };
+}
+calculateVolume(4)(5)(6);
