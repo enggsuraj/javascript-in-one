@@ -40,3 +40,4 @@ function calculateVolume(length) {
   };
 }
 calculateVolume(4)(5)(6);
+// 120
