@@ -15,7 +15,7 @@ console.log(a, b);
 let num = [0, 1, 2, 3, 4, 5];
 
 let [x, , y, ...rest] = num;
-console.log(x, y); // 0 2
+console.log(x, y); // 0 1
 console.log(rest); // [ 2, 3, 4, 5 ]
 
 let newArr = [...alphabet, ...num];
@@ -28,7 +28,7 @@ let obj = {
   address: {
     city: "New York",
     Area: "01/55",
-  }, 
+  },
 };
 
 let { name, ID } = obj;

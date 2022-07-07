@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling & Capturing</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 50px;
+        }
+    </style>
+
+    <!-- EVENT BUGGLING - INSIDE TO OUTSIDE -->
+    <h1>EVENT BUBBLING EVENT</h1>
+
+    <div class="grandparent1">
+        <div class="parent1">
+            <div class="child1"></div>
+        </div>
+    </div>
+
+
+    <br><br>
+    <h1>CAPTURING EVENT</h1>
+    <!-- EVENT BUGGLING - INSIDE TO OUTSIDE -->
+    <div class="grandparent2">
+        <div class="parent2">
+            <div class="child2"></div>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>STOP PROPOGATION EVENT</h1>
+    <!-- EVENT BUGGLING - INSIDE TO OUTSIDE -->
+    <div class="grandparent3">
+        <div class="parent3">
+            <div class="child3"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

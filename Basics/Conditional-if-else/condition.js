@@ -15,9 +15,9 @@ if (age >= 18) {
 }
 
 //if- else if -else
-let age = 18;
-let isChild = age <= 7;
-let isSenior = age >= 65;
+let age2 = 18;
+let isChild = age2 <= 7;
+let isSenior = age2 >= 65;
 if (isChild) {
   console.log("Welcome! You are free.");
 } else if (isSenior) {
