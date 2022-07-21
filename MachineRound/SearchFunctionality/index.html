@@ -10,13 +10,21 @@
 </head>
 
 <body>
+    <header>
+        <p id="title">Vanilla JS Search Functionality from a API</p>
+    </header>
     <main>
-        <p id="title">Search Functionality from a API</p>
-        <input type="text" id="inputValue" value="mojombo" onkeyup=filterData(value)>
+        <input type="text" id="inputValue" onkeyup=filterData(value)>
         <button type="button" id="btn">
             Search
         </button>
     </main>
+
+    <div class="categories">
+        <button id="mensclothing">Men's Clothing</button>
+        <button id="electronics">Electronics</button>
+        <button id="jewelery">Jewelery</button>
+    </div>
 
     <div class="container">
         <!-- <div class="box">
@@ -24,8 +32,8 @@
             <p id="title">Social Network</p>
             <p id="description">Lorem ipsum dolor sit amet.</p>
         </div> -->
-
     </div>
+
 
     <script src="./script.js"></script>
 </body>
