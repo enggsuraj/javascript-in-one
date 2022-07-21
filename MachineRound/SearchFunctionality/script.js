@@ -42,7 +42,7 @@ const displayData = (data) => {
     box.classList.add("box");
     box.innerHTML = `
     <img src=${each.image} alt="">
-    <p id="title">${each.title}</p>`;
+    <p id="title">${each.title.substring(0, 60) + "..."}</p>`;
     container.appendChild(box);
   });
 };
