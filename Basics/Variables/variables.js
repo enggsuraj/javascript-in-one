@@ -1,4 +1,5 @@
 //var is function scoped, let const are block scoped
+// Scope - region on program where certain varibale can be recognised.
 
 //GLOBAL
 var person1 = "Mike";
@@ -16,4 +17,26 @@ let getDetails = function () {
   };
 };
 
-console.log(getDetails());
+// console.log(getDetails());
+
+// var vs let vs const
+// 1.
+
+{
+  var a = 5;
+  let b = 5;
+}
+
+console.log(a, b);
+
+// var c;
+// var c;
+
+// It is valid
+
+/*
+let d;
+let d;
+
+invalid 
+*/

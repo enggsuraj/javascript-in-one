@@ -52,3 +52,14 @@ const sumAndMultiply = (m, n) => {
 const [sum, multiply] = sumAndMultiply(2, 9);
 console.log(sum);
 console.log(multiply);
+
+// SPREAD VS REST
+
+function multiply(...nums) {
+  // ...nums is rest operator
+  console.log(nums[0] * nums[1]);
+}
+
+let arr = [5, 6];
+multiply(...arr); //spread
+//30

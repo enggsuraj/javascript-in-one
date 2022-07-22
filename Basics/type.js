@@ -41,3 +41,6 @@ console.log(newPerson);
 person object is store in a memory and when we assign newPerson to person the pointer to person is copied to newPerson
 
 */
+
+typeof undefined;
+typeof NaN;

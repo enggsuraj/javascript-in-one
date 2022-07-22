@@ -1,5 +1,6 @@
 //Variables created using var can be accessed before they are declared
 //This hoist can cause unexpected behaviour
+// During creation phase js move variables and fn to top of code - this is hoisting.
 
 //1.
 var num;
