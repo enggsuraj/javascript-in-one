@@ -35,6 +35,8 @@ Enums
 let num:number = 45;
 let str:string = 'TypeScript';
 let isCoding:boolean = true;
+let y: undefined = undefined;
+let z: null = null;
 
 let data: string | number;
 
@@ -55,7 +57,28 @@ arr_2.push('d');
 
 let arr_3: (string | number | boolean)[] = ['a', 1, true]
 
+// TUPLES
+/*
+A tuple is a typed array with a pre-defined length and types for each index.
+*/
+
+let ourTuple: [number, boolean, string] = [5, false, 'Coding'];
+
+// define our readonly tuple
+const ourReadonlyTuple: readonly [number, boolean, string] = [5, true, 'The Real Coding God'];
+// throws error as it is readonly.
+//ourReadonlyTuple.push('Coding God took a day off');
+
+const graph: [number, number] = [55.2, 41.3];
+const [p, q] = graph;
+
 // 3. OBJECTS
+
+const car: { type: string, model: string, year: number } = {
+    type: "Toyota",
+    model: "Corolla",
+    year: 2009
+  };
 
 interface objInterface {
     name:string, 
@@ -73,7 +96,22 @@ const getDetails = (obj: objInterface) => {
 
 getDetails(obj)
 
-// CLASS
+// ALIASES
+
+type StringAndNum = string | number;
+let val :StringAndNum = 'Data'
+
+//Interfaces are similar to type aliases, except they only apply to object types.
+interface Rectangle {
+    height: number,
+    width: number
+  }
+  
+  const rectangle: Rectangle = {
+    height: 20,
+    width: 10
+  };
+
 
 interface PersonInterface {
     name:string;
@@ -118,8 +156,41 @@ form2.addEventListener('submit', ()=> {
     greeting.innerText = person.greet();
 })
 
+// FUNCTIONS
+// the `: number` here specifies that this function returns a number
+function getTime(): number {
+return new Date().getTime();
+}
+
+function printHello(): void {
+console.log('Hello!');
+}
+
+function multiply(a: number, b: number) {
+return a * b;
+}
+
+// CLASSES
+class Person1 {
+    private name: string;
+
+    public constructor(name: string) {
+      this.name = name;
+    }
+  
+    public getName(): string {
+      return this.name;
+    }
+  }
+  
+  const person = new Person1("Jane");
+  console.log(person.getName()); // person.name isn't accessible from outside the class since it's private
 
 // GENERICS
+/*
+Generics allow creating 'type variables' which can be used to create classes, functions & type aliases that don't need to explicitly define the types that they use.
+Generics makes it easier to write reusable code.
+*/
 
 function doSomething<T>(args :T):T{
     return args
