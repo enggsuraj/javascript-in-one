@@ -188,6 +188,8 @@ bst.insert(12);
 bst.insert(28);
 bst.insert(39);
 
+console.log(bst);
+
 bst.size();
 
 bst.min();
@@ -197,11 +199,12 @@ bst.contains(2);
 bst.contains(9);
 
 // DFS!!!
-// in-order: 2, 3, 12, 15, 28, 36, 39
-bst.dfsInOrder();
 
 // pre-order: 15, 3, 2, 12, 36, 28, 39
 bst.dfsPreOrder();
+
+// in-order: 2, 3, 12, 15, 28, 36, 39
+bst.dfsInOrder();
 
 // post-order: 2, 12, 3, 28, 39, 36, 15
 bst.dfsPostOrder();
