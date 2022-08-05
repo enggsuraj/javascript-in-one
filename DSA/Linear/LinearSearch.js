@@ -55,8 +55,7 @@ function LinearSearch2D(items, search) {
   return false;
 }
 
-// console.log(LinearSearch(arr, search));
-// console.log(findMin(arr));
-// console.log(findMax(arr));
-
+console.log(LinearSearch(arr, search));
+console.log(findMin(arr));
+console.log(findMax(arr));
 console.log(LinearSearch2D(items, search));
