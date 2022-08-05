@@ -1,126 +1,34 @@
-// LINKED LIST
-
-// Linear Data Structure
-class Node {
-  constructor(data, next = null) {
-    this.data = data;
-    this.next = next;
-  }
-}
-
-// MAIN
-class LinkedList {
+// QUEUE
+class Queue {
   constructor() {
-    this.head = null;
-    this.size = 0;
+    this.items = [];
   }
 
-  // INSERT FIRST NODE
-  insertFirst(data) {
-    this.head = new Node(data, this.head);
-    this.size++;
+  // ADD ELEMENT
+  add(data) {
+    this.items.push(data);
   }
 
-  // INSERT LAST NODE
-  insertLast(data) {
-    let node = new Node(data);
-    let current;
-    if (!this.head) {
-      this.head = node;
-    } else {
-      current = this.head;
-      while (current.next) {
-        current = current.next;
-      }
-      current.next = node;
-    }
-    this.size++;
+  // REMOVE
+  remove() {
+    this.items.shift();
   }
 
-  // INSERT AT INDEX
-  insertAt(data, index) {
-    if (index > 0 && index > this.size) {
-      return;
-    }
-
-    if (index === 0) {
-      this.insertFirst(data);
-      return;
-    }
-
-    const node = new Node(data);
-    let current, previous;
-    current = this.head;
-    let count = 0;
-    while (count < index) {
-      previous = current;
-      count++;
-      current = current.next;
-    }
-    node.next = current;
-    previous.next = node;
-    this.size++;
-  }
-
-  // GET A INDEX
-  getAt(index) {
-    let current = this.head;
-    let count = 0;
-    while (current) {
-      if (count == index) {
-        console.log(current.data);
-      }
-      count++;
-      current = current.next;
-    }
-    return null;
-  }
-
-  // REMOVE AT INDEX
-  removeAt(index) {
-    if (index > 0 && index > this.size) {
-      return;
-    }
-    let current = this.head;
-    let previous;
-    let count = 0;
-
-    if (index === 0) {
-      this.head = current.next;
-    } else {
-      while (count < index) {
-        count++;
-        previous = current;
-        current = current.next;
-      }
-      previous.next = current.next;
-    }
-    this.size--;
-  }
-
-  // CLEAR LIST
-  clearList() {
-    this.head = null;
-    this.size = 0;
-  }
-
-  // PRINT LIST DATA
-  printListData() {
-    let current = this.head;
-    while (current) {
-      console.log(current.data);
-      current = current.next;
+  // DISPLAY
+  display() {
+    for (let i = 0; i < this.items.length; i++) {
+      console.log(this.items[i]);
     }
   }
 }
 
-const ll = new LinkedList();
-ll.insertFirst(100);
-ll.insertFirst(200);
-ll.insertFirst(300);
-ll.insertLast(400);
-ll.insertAt(500, 4);
-ll.getAt(3);
-ll.removeAt(2);
-ll.clearList();
-console.log(ll.printListData());
+const queue = new Queue();
+queue.add(100);
+queue.add(200);
+queue.add(300);
+
+queue.display();
+
+queue.remove();
+
+queue.display();

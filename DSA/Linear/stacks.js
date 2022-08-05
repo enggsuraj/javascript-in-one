@@ -1,108 +1,49 @@
+// STACK
+class Stack {
+  constructor() {
+    this.items = [];
+    this.count = 0;
+  }
 
-//STACKS 
+  // PUSH ITEMS
+  push(data) {
+    this.items.push(data);
+    this.count++;
+  }
 
-/*
-_
-_
-_
-_
+  // POP ITEMS
+  pop(data) {
+    if (this.count == 0) return undefined;
+    this.items.pop(data);
+    this.count--;
+  }
 
-LIFO order
+  // TOP ELEMENT
+  topElement() {
+    console.log(`Top Element is ${this.items[this.count - 1]}`);
+  }
 
-*/
-
-//1. using linked list
-class Node {
-    constructor(value){
-      this.value = value;
-      this.next = null;
+  // DISPLAY
+  display() {
+    for (let i = 0; i < this.count; i++) {
+      console.log(this.items[i]);
     }
   }
-  
-  class Stack {
-    constructor(){
-      this.top = null;
-      this.bottom = null;
-      this.length = 0;
-    }
-    peek() {
-      return this.top;
-    }
-    push(value){
-      const newNode = new Node(value);
-      if (this.length === 0) {
-        this.top = newNode;
-        this.bottom = newNode;
-      } else {
-        const holdingPointer = this.top;
-        this.top = newNode;
-        this.top.next = holdingPointer;
-      }
-      this.length++;
-      return this;
-    }
-    pop(){
-      if (!this.top) {
-        return null;
-      }
-      if (this.top === this.bottom) {
-        this.bottom = null;
-      }
-      const holdingPointer = this.top;
-      this.top = this.top.next;
-      this.length--;
-      return this;
-    }
-    //isEmpty
-  }
-  
-  const myStack = new Stack();
-  myStack.peek();
-  myStack.push('google');
-  myStack.push('udemy');
-  myStack.push('discord');
-  myStack.peek();
-  myStack.pop();
-  myStack.pop();
-  myStack.pop();
-  
-  
-  //Discord
-  //Udemy
-  //google
-  
 
-  //2. using arrays
-
-  class Stack {
-    constructor(){
-      this.array = [];
-    }
-    peek() {
-      return this.array[this.array.length-1];
-    }
-    push(value){
-      this.array.push(value);
-      return this;
-    }
-    pop(){
-      this.array.pop();
-      return this;
-    }
+  // CLEAR
+  clear() {
+    this.items = [];
+    this.count = 0;
   }
-  
-  const myStack = new Stack();
-  myStack.peek();
-  myStack.push('google');
-  myStack.push('udemy');
-  myStack.push('discord');
-  myStack.peek();
-  myStack.pop();
-  myStack.pop();
-  myStack.pop();
-  
-  
-  //Discord
-  //Udemy
-  //google
-  
+}
+
+const stack = new Stack();
+stack.push(100);
+stack.push(200);
+stack.push(300);
+stack.push(400);
+
+stack.pop();
+
+stack.display();
+stack.topElement();

@@ -1,57 +1,34 @@
-//QUEUE
+// QUEUE
+class Queue {
+  constructor() {
+    this.items = [];
+  }
 
-class Node {
-    constructor(value) {
-      this.value = value;
-      this.next = null;
+  // ADD ELEMENT
+  add(data) {
+    this.items.push(data);
+  }
+
+  // REMOVE
+  remove() {
+    this.items.shift();
+  }
+
+  // DISPLAY
+  display() {
+    for (let i = 0; i < this.items.length; i++) {
+      console.log(this.items[i]);
     }
   }
-  
-  class Queue {
-    constructor(){
-      this.first = null;
-      this.last = null;
-      this.length = 0;
-    }
-    peek() {
-      return this.first;
-    }
-    enqueue(value){
-      const newNode = new Node(value);
-      if (this.length === 0) {
-        this.first = newNode;
-        this.last = newNode;
-      } else {
-        this.last.next = newNode;
-        this.last = newNode;
-      }
-      this.length++;
-      return this;
-    }
-    dequeue(){
-      if (!this.first) {
-        return null;
-      }
-      if (this.first === this.last) {
-        this.last = null;
-      }
-      const holdingPointer = this.first;
-      this.first = this.first.next;
-      this.length--;
-      return this;
-    }
-    //isEmpty;
-  }
-  
-  const myQueue = new Queue();
-  myQueue.peek();
-  myQueue.enqueue('Joy');
-  myQueue.enqueue('Matt');
-  myQueue.enqueue('Pavel');
-  myQueue.peek();
-  myQueue.dequeue();
-  myQueue.dequeue();
-  myQueue.dequeue();
-  myQueue.peek();
-  
-  
+}
+
+const queue = new Queue();
+queue.add(100);
+queue.add(200);
+queue.add(300);
+
+queue.display();
+
+queue.remove();
+
+queue.display();
