@@ -1,56 +1,35 @@
-// HASH TABLE
+// STRING USEFUl
 
-const hash = (key, size) => {
-  let hashedKey = 0;
-  for (let i = 0; i < key.length; i++) {
-    hashedKey += key.charCodeAt(i);
-  }
-  return hashedKey % size;
-};
+/*
 
-class HashTable {
-  constructor() {
-    this.size = 20;
-    this.buckets = Array(this.size);
+trim()
+split()
+replace(/\s+/g, " ")
 
-    // populate each bucket with a Map()
-    for (let i = 0; this.buckets.length; i++) {
-      this.buckets[i] = new Map();
-    }
-  }
+*/
 
-  insert(key, value) {
-    let idx = hash(key, this.size);
-    this.buckets[idx].set(key, value);
-  }
+let str = "   luffy   is   still joyboy  ";
 
-  remove(key) {
-    let idx = hash(key, this.size);
-    let deleted = this.buckets[idx].get(key);
-    this.buckets[idx].delete(key);
-    return deleted;
-  }
+function LastWordLength(str) {
+  let data1 = str.trim();
+  console.log(data1);
+  //luffy   is   still joyboy
 
-  search(key) {
-    let idx = hash(key, this.size);
-    return this.buckets[idx].get(key);
-  }
+  let data2 = str.split("");
+  console.log(data2);
+  //[' ', ' ', ' ', 'l', 'u', 'f', 'f', 'y', ' ', ' ', ' ', 'i', 's', ' ', ' ', ' ', 's', 't', 'i', 'l', 'l', ' ', 'j', 'o', 'y', 'b', 'o', 'y', ' ', ' ']
+
+  let data3 = str.trim().split(" ");
+  console.log(data3);
+  // ['luffy', '', '', 'is', '', '', 'still', 'joyboy']
+
+  let data4 = str.replace(/\s+/g, " ").trim();
+  console.log(data4);
+  //luffy is still joyboy
+
+  let data5 = str.replace(/\s+/g, " ").trim().split(" ");
+  console.log(data5);
+  //(4) ['luffy', 'is', 'still', 'joyboy']
 }
 
-const hashTable = new HashTable();
-
-hashTable.insert("serena", "moon");
-hashTable.insert("amy", "mercury");
-hashTable.insert("rei", "mars");
-hashTable.insert("lita", "jupiter");
-hashTable.insert("mina", "venus");
-hashTable.insert("darien", "tuxedo mask");
-
-hashTable.search("rei");
-hashTable.search("lita");
-hashTable.search("serena");
-
-hashTable.remove("darien");
-hashTable.remove("mina");
-
-hashTable;
+LastWordLength(str);
