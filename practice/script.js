@@ -1,4 +1,4 @@
-// Linked List
+// Print the Middle of a given linked list
 
 class Node {
   constructor(data, next = null) {
@@ -13,93 +13,68 @@ class LinkedList {
     this.size = 0;
   }
 
-  //insertFirst
   insertFirst(data) {
-    let current = this.head;
-    const newNode = new Node(data);
-    newNode.next = this.head;
-    this.head = newNode;
+    this.head = new Node(data, this.head);
     this.size++;
   }
 
-  //insertLast
   insertLast(data) {
     let current = this.head;
-    let node = new Node(data);
-    if (!current) {
-      this.head = node;
+    let newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
     } else {
       while (current.next) {
         current = current.next;
       }
-      current.next = node;
-      this.size++;
+      current.next = newNode;
     }
+    this.size++;
   }
 
-  //insertAt
-  insertAt() {}
-
-  //search
-  search(target) {
+  //removeAt
+  removeAt(index) {
     let current = this.head;
-    while (current) {
-      if (current.data === target) {
-        return true;
+    let previous;
+    let count = 0;
+
+    if (index === 0) {
+      this.head = current.next;
+    } else {
+      while (count < index) {
+        previous = current;
+        count++;
+        current = current.next;
       }
-      current = current.next;
+      previous.next = current.next;
+      this.size--;
     }
-    return false;
   }
 
-  //nodeValueAtIndex
-  nodeValueAtIndex(index) {
+  // middle of LL
+  middle() {
     let current = this.head;
-    for (let i = 0; i < index; i++) {
+    for (let i = 0; i < parseInt(this.size - 1) / 2; i++) {
       current = current.next;
     }
     console.log(current.data);
   }
 
-  //reverse
-  reverse() {
-    let previous = null;
-    let current = this.head;
-    let nxt;
-
-    while (current) {
-      nxt = current.next;
-      current.next = previous;
-      previous = current;
-      current = nxt; // similar to current=current.next
-    }
-    return previous;
-  }
-
-  //display
   display() {
     let current = this.head;
     while (current) {
       console.log(current.data);
       current = current.next;
     }
-    this.size++;
   }
 }
 
 const ll = new LinkedList();
+ll.insertLast(1);
+ll.insertLast(2);
+ll.insertLast(3);
 
-ll.insertLast("A");
-ll.insertLast("B");
-ll.insertLast("C");
-ll.insertLast("D");
-ll.insertLast("E");
-
-//console.log(ll.search("CS"));
-// ll.display();
 ll.display();
-
-console.log("-------------");
-
-// ll.nodeValueAtIndex(5);
-console.log(ll.reverse());
+console.log("-------");
+ll.removeAt(2);
+ll.display();
