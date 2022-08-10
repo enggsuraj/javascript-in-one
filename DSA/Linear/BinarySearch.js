@@ -1,6 +1,6 @@
 // BINARY SEARCH
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let search = 9;
+let target = 9;
 /*
 
 FIND MIDDLE ELEMENT
@@ -12,16 +12,16 @@ ALREADY SORTED ARRAY
 
 */
 
-function BinarySearch(arr, search) {
+function BinarySearch(arr, target) {
   let start = 0;
   let end = arr.length - 1;
 
   while (start <= end) {
     let mid = parseInt((start + end) / 2);
 
-    if (search < arr[mid]) {
+    if (target < arr[mid]) {
       end = mid - 1;
-    } else if (search > arr[mid]) {
+    } else if (target > arr[mid]) {
       start = mid + 1;
     } else {
       return mid;
@@ -30,7 +30,7 @@ function BinarySearch(arr, search) {
   return false;
 }
 
-console.log(BinarySearch(arr, search));
+console.log(BinarySearch(arr, target));
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -47,11 +47,11 @@ function findMe(target, start, end) {
     return `Found at index ${middle}`;
   }
 
-  if (arr[middle] > target) {
+  if (target < arr[middle]) {
     return findMe(target, start, middle - 1);
   }
 
-  if (arr[middle] < target) {
+  if (target > arr[middle]) {
     return findMe(target, middle + 1, end);
   }
 }

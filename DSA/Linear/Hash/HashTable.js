@@ -1,5 +1,16 @@
 // HASH TABLE
 
+/*
+
+create hash fn
+hashTable class
+constructor fill array size 20 and map each
+insert()
+remove()
+search()
+
+*/
+
 const hash = (key, size) => {
   let hashedKey = 0;
   for (let i = 0; i < key.length; i++) {
@@ -14,7 +25,7 @@ class HashTable {
     this.buckets = Array(this.size);
 
     // populate each bucket with a Map()
-    for (let i = 0; this.buckets.length; i++) {
+    for (let i = 0; i < this.buckets.length; i++) {
       this.buckets[i] = new Map();
     }
   }

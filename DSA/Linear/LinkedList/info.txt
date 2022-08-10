@@ -1,0 +1,11 @@
+**** LL good at inserting and removing element
+- eg: music player
+
+- Constant requirement of change in data in inseritng and removing use LL.
+
+array vs LL
+- array : direct access
+- LL : sequention access
+
+- array shift whole block if new eleemnt added(disadvantage)
+- LL just shift through next pointer.

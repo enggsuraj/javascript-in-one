@@ -104,6 +104,42 @@ class LinkedList {
     this.size = 0;
   }
 
+  //reverse LL
+  reverse() {
+    let previous = null;
+    let current = this.head;
+    let nxt;
+
+    while (current) {
+      nxt = current.next;
+      current.next = previous;
+      previous = current;
+      current = nxt; // similar to current=current.next
+    }
+    return previous;
+  }
+
+  // middle of LL
+  middle() {
+    let current = this.head;
+    for (let i = 0; i < (this.size - 1) / 2; i++) {
+      current = current.next;
+    }
+    console.log(current.data);
+  }
+
+  // GIVEN IS NODE VALUE
+  searchByDataValue(target) {
+    let current = this.head;
+    let index = 0;
+    while (current.data != target) {
+      index++;
+      console.log(current.data);
+      current = current.next;
+    }
+    console.log(index);
+  }
+
   // PRINT LIST DATA
   printListData() {
     let current = this.head;

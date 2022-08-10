@@ -1,5 +1,13 @@
 // DOUBLY LINKED LIST
 
+class Node {
+  constructor(value, prev, next) {
+    this.value = value;
+    this.next = next || null;
+    this.prev = prev || null;
+  }
+}
+
 class LinkedList {
   constructor() {
     this.head = this.tail = null;
@@ -88,14 +96,6 @@ class LinkedList {
     }
 
     return null;
-  }
-}
-
-class Node {
-  constructor(value, prev, next) {
-    this.value = value;
-    this.next = next || null;
-    this.prev = prev || null;
   }
 }
 
